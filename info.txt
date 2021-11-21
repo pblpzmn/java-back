@@ -1,0 +1,14 @@
+mvn spring-boot:run
+
+#DOCKER PROJECT NET
+docker network create -d bridge java-react-net
+
+ ## java + maven
+docker run -it --rm \
+--name java-react \
+--network java-react-net \
+-p 80:8081 \
+-v $(pwd)/java-react/:/usr/src/mymaven \
+-v "$HOME/.m2":/root/.m2 \
+-v $(pwd)/java-react/target/run:/usr/src/mymaven/target \
+-w /usr/src/mymaven maven:3.6.3-jdk-11 mvn spring-boot:run
