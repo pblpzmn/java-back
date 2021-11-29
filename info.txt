@@ -7,7 +7,7 @@ docker network create -d bridge java-react-net
 docker run -it --rm \
 --name java-react \
 --network java-react-net \
--p 80:8081 \
+-p 8080:8081 \
 -v $(pwd)/java-react/:/usr/src/mymaven \
 -v "$HOME/.m2":/root/.m2 \
 -v $(pwd)/java-react/target/run:/usr/src/mymaven/target \
