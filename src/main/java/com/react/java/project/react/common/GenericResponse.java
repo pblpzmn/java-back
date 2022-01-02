@@ -1,4 +1,4 @@
-package com.react.java.project.react;
+package com.react.java.project.react.common;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
